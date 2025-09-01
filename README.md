@@ -1,5 +1,9 @@
 # SISGAR – Sistema de Gestão de Água em Reservatórios
 
+<p align="center">
+  <img src="docs/images/logo_sisgar.png" alt="Logo do SISGAR" width="300"/>
+</p>
+
 Este repositório contém o código-fonte, documentação e recursos relacionados ao **SISGAR – Sistema de Gestão de Água em Reservatórios**.  
 O objetivo do projeto é fornecer uma plataforma aberta e extensível para análise, simulação e gestão de reservatórios hídricos, integrando diferentes fontes de dados (imagens de satélite, curvas batimétricas, réguas limnimétricas etc.).
 
