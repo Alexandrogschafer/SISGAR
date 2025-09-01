@@ -1,32 +1,10 @@
-# Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-
-# Build / dist
-build/
-dist/
 *.egg-info/
-*.egg
-*.whl
-
-# Coverage / cache
-.coverage
-.coverage.*
-.cache/
-.pytest_cache/
-
-# IDE / SO
+.venv/
+.env/
 .DS_Store
-.idea/
-.vscode/
-*.swp
-
-# Jupyter
 .ipynb_checkpoints/
-
-# Env
-.env
-.venv
-ENV/
+dist/
+build/
+.streamlit/
