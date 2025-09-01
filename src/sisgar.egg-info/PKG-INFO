@@ -1,0 +1,53 @@
+Metadata-Version: 2.4
+Name: sisgar
+Version: 0.1.0
+Summary: SISGAR — Sistema de Gestão de Água em Reservatórios (quantitativo: nível, área e volume)
+Author: Equipe SISGAR
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.24
+Requires-Dist: pandas>=1.5
+Requires-Dist: rasterio>=1.3
+Requires-Dist: geopandas>=0.14
+Requires-Dist: shapely>=2.0
+Requires-Dist: pyproj>=3.5
+Requires-Dist: matplotlib>=3.8
+Requires-Dist: plotly>=5.20
+Requires-Dist: streamlit>=1.35
+Requires-Dist: pydantic>=2
+Provides-Extra: dev
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: pytest-cov>=4; extra == "dev"
+Requires-Dist: ruff>=0.5; extra == "dev"
+Requires-Dist: pre-commit>=3.6; extra == "dev"
+Dynamic: license-file
+
+# SISGAR — Sistema de Gestão de Água em Reservatórios
+
+Ferramenta para **gestão quantitativa** de água em reservatórios: **nível, área, volume e balanço**,
+com integração de **imagens** (ex.: Sentinel‑2), **régua limnimétrica** e **curva Cota×Volume**.
+
+## Instalação (desenvolvimento)
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -U pip
+pip install -e .[dev]
+```
+
+## Executar o app (protótipo)
+
+```bash
+streamlit run src/sisgar/app/dashboard.py
+```
+
+## Estrutura
+
+- `src/sisgar/` — pacote principal (io, processing, hydro, utils, app Streamlit)
+- `tests/` — testes unitários
+- `data/sample/` — dados de exemplo (pequenos)
+- `.github/workflows/ci.yml` — CI com lint e testes
+
+> Observação: publicação de documentação (MkDocs/GitHub Pages) pode ser adicionada futuramente.
