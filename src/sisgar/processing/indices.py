@@ -1,8 +1,10 @@
+from __future__ import annotations
+
 import numpy as np
 
+
 def ndwi(green: np.ndarray, nir: np.ndarray) -> np.ndarray:
-    denom = (green + nir)
-    with np.errstate(divide='ignore', invalid='ignore'):
-        out = (green - nir) / denom
-    out[~np.isfinite(out)] = 0.0
-    return out
+    """Calcula NDWI a partir das bandas GREEN e NIR.
+    Retorna array float32 no mesmo shape.
+    """
+    raise NotImplementedError("Implementar NDWI (green, nir) -> ndarray")

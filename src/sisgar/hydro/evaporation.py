@@ -1,3 +1,10 @@
-def pan_evaporation_to_volume(area_m2: float, pan_mm: float, coeff: float = 0.7) -> float:
-    """Converte leitura de tanque (mm) em volume (m³) usando coeficiente."""
-    return area_m2 * (pan_mm * coeff) / 1000.0
+from __future__ import annotations
+
+from typing import Sequence
+
+import numpy as np
+
+
+def thornthwaite(t_media_mensal_c: Sequence[float]) -> np.ndarray:
+    """Evapotranspiração potencial mensal (mm/mês)."""
+    raise NotImplementedError("Implementar Thornthwaite")

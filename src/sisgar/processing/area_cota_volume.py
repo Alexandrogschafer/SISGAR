@@ -1,14 +1,12 @@
-from dataclasses import dataclass
+from __future__ import annotations
+
+from typing import Tuple
+
 import numpy as np
 
-@dataclass
-class AreaVolume:
-    area_m2: float
-    volume_m3: float
 
-def area_from_mask(mask: np.ndarray, pixel_area_m2: float) -> float:
-    return float(mask.sum()) * float(pixel_area_m2)
-
-def mm_to_m3(area_m2: float, depth_mm: float) -> float:
-    """Converte lâmina d’água (mm) em volume (m³)."""
-    return area_m2 * (depth_mm / 1000.0)
+def area_e_volume(mask_agua: np.ndarray, pixel_area_m2: float) -> Tuple[float, float]:
+    """Retorna (area_m2, volume_m3) a partir da máscara de água.
+    Por ora, considere volume como placeholder (p.ex. area * fator).
+    """
+    raise NotImplementedError("Implementar cálculo de área (e volume provisório)")
